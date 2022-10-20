@@ -18,6 +18,12 @@ if [ ! -d $HOME/.vim/bundle/Vundle.vim ]; then
     vim +PluginInstall +qall
 fi
 
+echo "Checking if git config is installed..."
+if [ ! -f $HOME/.gitconfig ]; then
+    echo "git config not found. Installing now."
+    cp ./.gitconfig $HOME/.gitconfig
+fi
+
 echo "Checking if git shell completion is installed..."
 if [ ! -f $HOME/.git-completion.zsh ]; then
         echo "git shell completion not found. Installing now."

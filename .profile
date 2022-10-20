@@ -28,6 +28,3 @@ alias bd='cd "$OLDPWD"'
 # alias use firefox debugging
 alias ffdb='/Applications/Firefox.app/Contents/MacOS/firefox -start-debugger-server'
 
-# add git completion
-source ~/.git-completion.zsh
-

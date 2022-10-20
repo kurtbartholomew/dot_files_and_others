@@ -1,0 +1,21 @@
+[user]
+	name = Kurt Bartholomew
+	email = generic_email@gmail.com
+[alias]
+	st = status
+	ci = commit
+	br = branch
+	co = checkout
+	last = log -l HEAD
+	amend = commit -a --amend
+	pod = pull --rebase --prune origin dev
+	logg = log --oneline --graph --color --decorate
+    po = push origin HEAD
+    brl = for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
+    bs = branch -a --list
+    fc = log -p -G
+    pof = push origin HEAD --force --no-verify
+    coa = commit --amend --no-edit --no-verify
+    coat = commit --amend --no-edit
+[rerere]
+	enabled = true

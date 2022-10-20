@@ -24,9 +24,19 @@ if [ ! -f $HOME/.gitconfig ]; then
     cp ./.gitconfig $HOME/.gitconfig
 fi
 
+echo "Checking if dot files have been installed..."
+if [ ! -f $HOME/.profile ]; then
+    echo ".profile not found. Installing now."
+    cp ./.profile $HOME/.profile
+fi
+if [ ! -f $HOME/.zprofile ]; then
+    echo ".zprofile not found. Installing now."
+    cp ./.zprofile $HOME/.zprofile
+fi
+
 echo "Checking if git shell completion is installed..."
 if [ ! -f $HOME/.git-completion.zsh ]; then
-        echo "git shell completion not found. Installing now."
+    echo "git shell completion not found. Installing now."
 	curl -o $HOME/.git-completion.zsh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.zsh
 fi
 
